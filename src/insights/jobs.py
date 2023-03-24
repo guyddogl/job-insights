@@ -7,10 +7,7 @@ import csv
 def read(path: str) -> List[Dict]:
     with open(path) as file:
         data = csv.DictReader(file)
-        datafile = []
-        for row in data:
-            datafile.append(row)
-        return datafile
+        return [datafile for datafile in data]
 
 
 def get_unique_job_types(path: str) -> List[str]:
